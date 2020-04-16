@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+}
+
+main{
+    background-color: #141414;
+}
+.container{
+    max-width:1200px;
+}
+#home-inner-container{
+    padding:1em;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.display-4{
+    text-align:center;
+    color:white;
+}
+#genre-container{
+    flex:0.5 0 0;
+    border-right: 1px solid lightgray;
+}
+#genre-menu{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style-type: none;
+}
+.genre-menu-item{
+    text-decoration: none;
+    padding: 0.5em;
+    color: lightgray;
+}
+#movie-container{
+    flex:2.5 0 0;
+}
+.section-heading{
+    font-size: 1.2em;
+}
+#popular-item-container{
+    padding:0.5em;
+}
+.movie-title{
+    text-align: center;
+}
+.card a{
+    color:inherit
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+ .StripeElement {
+    box-sizing: border-box;
+  
+    height: 40px;
+  
+    padding: 10px 12px;
+  
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+  
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
