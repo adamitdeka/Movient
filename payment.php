@@ -1,48 +1,42 @@
-<?php
-   
-?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/payment.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <title>payment</title>
-  </head>
-  <body>
-    
-        <form action="/charge" method="post" id="payment-form">
-            <div class="form-row">
-                <label for="card-element">
-                    Credit or debit card
-                </label>
-                <div id="card-element">
-                <!-- A Stripe Element will be inserted here. -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- The Styling File -->
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="credit-container">
+            <ul>
+                <li></li>
+            </ul>
+            <form action="charge.php" method="post" id="payment-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input id=customer-name name="customer-name" class="form-control" placeholder="Enter your name here">
                 </div>
-
-                <!-- Used to display Element errors. -->
-                <div id="card-errors" role="alert"></div>
-            </div>
-
-            <button>Submit Payment</button>
-        </form>
-        <script src="https://js.stripe.com/v3/"></script>
-    <script src="./js/payment.js"></script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    <script>
-        
-        $("#header").load("includes/header.html"); 
-        $("#footer").load("includes/footer.html"); 
-        
-    </script>
-  </body>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input id=customer-name name="customer-name" class="form-control" placeholder="Enter your email here">
+                </div>
+                <div class="form-row form-group">
+                    <label for="card-element" class="lead">Credit or debit card</label>
+                    <div id="card-element">
+                    <!-- a Stripe Element will be inserted here. -->
+                    </div>
+                    <!-- Used to display form errors -->
+                    <div id="card-errors"></div>
+                </div>
+                <button>Submit Payment</button>
+            </form>
+        </div>
+    </div>
+    <!-- The needed JS files -->
+    <!-- JQUERY File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Your JS File -->
+    <script src="js/client.js"></script>
+</body>
 </html>

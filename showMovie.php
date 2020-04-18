@@ -1,5 +1,10 @@
 <?php
-   
+    require_once "classes/movie.php";
+    $movieID = $_GET['id'];
+    $movie = new Movie();
+    $details = $movie->getMovie($movieID);
+    $posterPath = "https://image.tmdb.org/t/p/w400/".$details['poster_path'];
+    var_dump($details);
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,23 +24,36 @@
         <div id="header"></div>
     </header>
     <main>
-        <div id="poster-outer-container">
-            <div class="container" id="home-outer-container">
-                <div id="movie-poster-container">
-                    <img id="movie-poster" src="...">
-                </div>
+        <div class="container show-movie-container">
+            <div class="movie-poster-container">
+                <img  src="<?=$posterPath?>">
             </div>
-            <div id="movie-details-container">
-                <div id="movie-title-container">
-                    <h1 class="h1">Movie Title</h1>
-                    <div id="movie-facts">
-                        <span id="release-date">12/11/2018</span>
-                        <span></span>
-                        <span id="movie-genre">Genre</span>
+            <div class="movie-details-container">
+                <h2 class="display-4"><?=$details['original_title']?></h2>
+                <div class="movie-stats-container">
+                    <span class="movie-stat lead"><?=$details['release_date']?> |</span>
+                    <span class="movie-stat lead"><?php
+                        foreach($details['genres'] as $genre){
+                            echo($genre['name']." |");
+                        }
+                    ?></span>
+                </div>
+                <div class="overview-container">
+                    <h3 class="h3">Overview</h3>
+                    <p class="lead"><?=$details['overview']?></p>
+                </div>
+                <div class="movie-crew-container">
+                    <div class="crew-item">
+                        <span class="crew-name lead">crew name</span>
+                        <span class="crew-position lead">crew position</span>
+                    </div>
+                    <div class="crew-item">
+                        <span class="crew-name lead">crew name</span>
+                        <span class="crew-position lead">crew position</span>
                     </div>
                 </div>
+                <button class="btn btn-lg btn-primary rent-btn" onclick="location.href = 'payment.php'">Rent</button>
             </div>
-            <a href="payment.php"><button>Rent</button></a>
         </div>
     </main>
     <footer>

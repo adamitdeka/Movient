@@ -9,6 +9,7 @@ main{
 }
 .container{
     max-width:1200px;
+    margin: 0 auto;
 }
 #home-inner-container{
     padding:1em;
@@ -47,39 +48,115 @@ main{
 }
 .movie-title{
     text-align: center;
+    color: black !important;
 }
 .card a{
     color:inherit
 }
+/*Show Movie Page*/
+.lead{
+    color:white;
+}
+.display-4{
+    text-align: left;
+}
+.show-movie-container{
+    margin-left: 1em;
+    padding:1.5em;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.movie-poster-container{
+    padding:1em;
+    border-right: 1px solid darkgray ;
+}
+.movie-details-container{
+    padding:1em;
+}
+.movie-stat-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.movie-stat{
+    padding:0.5em;
+}
 
-/**
- * The CSS shown here will not be introduced in the Quickstart guide, but shows
- * how you can use CSS to style your Element's container.
- */
- .StripeElement {
-    box-sizing: border-box;
-  
-    height: 40px;
-  
-    padding: 10px 12px;
-  
-    border: 1px solid transparent;
-    border-radius: 4px;
+.overview-container{
+    margin-top:1em;
+}
+.h3{
+    color:white;
+}
+.overview-container p{
+    padding:0.5em; 
+}
+.movie-crew-container{
+    margin-top: 1em;
+    padding:0.5em;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.crew-item span{
+    display:block;
+    text-align: center;
+}
+.crew-name{
+    font-size:1.2em !important;
+    font-weight: bold !important;
+    color: lightgrey;
+}
+.rent-btn{
+    margin-top:1em;
+}
+
+/*stripe*/
+.StripeElement {
     background-color: white;
-  
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
-  }
-  
-  .StripeElement--focus {
+}
+.StripeElement--focus {
     box-shadow: 0 1px 3px 0 #cfd7df;
-  }
-  
-  .StripeElement--invalid {
+}
+.StripeElement--invalid {
     border-color: #fa755a;
-  }
-  
-  .StripeElement--webkit-autofill {
+}
+.StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
-  }
+}
+
+/*payment*/
+.credit-container{
+    max-width:50%;
+    margin: 1em auto;
+    padding:2em;
+    border: 1px solid #036ffc;
+    border-radius: 20px;
+    background-color: rgb(148, 194, 224);
+}
+.credit-container button{
+    padding: 0.5em;
+    border-style: none;
+    background-color: #036ffc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form-group{
+    padding: 1em 0;
+}
+
+.form-group label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+}
+
+.form-control{
+    width:100%;
+    padding: 0.5em;
+}

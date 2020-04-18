@@ -9,6 +9,13 @@
         return $genres;
     }
 
+    public function getMovie($id){
+        $endPoint = "https://api.themoviedb.org/3/movie/$id?api_key=".$this::$apiKey."&language=en-US";
+        $details = file_get_contents($endPoint);
+        $details = json_decode($details,true);
+        return $details;
+    }
+
     public function getPopMovies(){
         $endPoint = "https://api.themoviedb.org/3/movie/popular?api_key=".$this::$apiKey."&language=en-US&page=1";
         $popMovies = file_get_contents($endPoint);
