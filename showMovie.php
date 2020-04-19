@@ -4,7 +4,6 @@
     $movie = new Movie();
     $details = $movie->getMovie($movieID);
     $posterPath = "https://image.tmdb.org/t/p/w400/".$details['poster_path'];
-    var_dump($details);
 ?>
 <!doctype html>
 <html lang="en">
@@ -52,7 +51,7 @@
                         <span class="crew-position lead">crew position</span>
                     </div>
                 </div>
-                <button class="btn btn-lg btn-primary rent-btn" onclick="location.href = 'payment.php'">Rent</button>
+                <button class="btn btn-lg btn-primary rent-btn" onclick="location.href = 'payment.php?id=<?=$movieID?>'">Rent</button>
             </div>
         </div>
     </main>

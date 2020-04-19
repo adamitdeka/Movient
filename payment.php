@@ -1,3 +1,6 @@
+<?php
+    $movieId = $_GET['id'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +11,17 @@
     <div class="container">
         <div class="credit-container">
             <ul>
-                <li></li>
+                <li>Rented movie will expire after 48 hours</li>
+                <li>Every movie price is 20 dollars</li>
             </ul>
-            <form action="charge.php" method="post" id="payment-form">
+            <form action="charge.php?id=<?=$movieId?>" method="post" id="payment-form">
                 <div class="form-group">
                     <label>Full Name</label>
                     <input id=customer-name name="customer-name" class="form-control" placeholder="Enter your name here">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input id=customer-name name="customer-name" class="form-control" placeholder="Enter your email here">
+                    <input id=customer-name name="customer-email" class="form-control" placeholder="Enter your email here">
                 </div>
                 <div class="form-row form-group">
                     <label for="card-element" class="lead">Credit or debit card</label>

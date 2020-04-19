@@ -1,5 +1,6 @@
 {
     "require": {
-        "stripe/stripe-php": "^7.28"
+        "stripe/stripe-php": "^7.28",
+        "pdfcrowd/pdfcrowd": "^4.11"
     }
 }

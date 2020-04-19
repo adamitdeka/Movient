@@ -6,4 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'PdfCrowd' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'PdfcrowdException' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'Pdfcrowd\\ConnectionHelper' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'Pdfcrowd\\Error' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'Pdfcrowd\\HtmlToImageClient' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'Pdfcrowd\\HtmlToPdfClient' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'Pdfcrowd\\ImageToImageClient' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'Pdfcrowd\\ImageToPdfClient' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
+    'Pdfcrowd\\PdfToPdfClient' => $vendorDir . '/pdfcrowd/pdfcrowd/pdfcrowd.php',
 );

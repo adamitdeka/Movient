@@ -1,5 +1,55 @@
 [
     {
+        "name": "pdfcrowd/pdfcrowd",
+        "version": "4.11.0",
+        "version_normalized": "4.11.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pdfcrowd/pdfcrowd-php.git",
+            "reference": "814258dee700ca90c73d367ec40ecc528ad01584"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pdfcrowd/pdfcrowd-php/zipball/814258dee700ca90c73d367ec40ecc528ad01584",
+            "reference": "814258dee700ca90c73d367ec40ecc528ad01584",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "php": ">=5.3.10"
+        },
+        "time": "2019-10-04T14:58:02+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "pdfcrowd.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pdfcrowd Team",
+                "email": "support@pdfcrowd.com",
+                "homepage": "https://pdfcrowd.com/doc/api/"
+            }
+        ],
+        "description": "A client library for the Pdfcrowd API. It lets you convert between HTML, PDF and various image formats",
+        "homepage": "https://pdfcrowd.com/doc/api/",
+        "keywords": [
+            "api",
+            "client",
+            "convert",
+            "html",
+            "pdf",
+            "web page",
+            "web service"
+        ]
+    },
+    {
         "name": "stripe/stripe-php",
         "version": "v7.28.1",
         "version_normalized": "7.28.1.0",
